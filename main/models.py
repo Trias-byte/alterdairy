@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Peaple (models):
+class Peaple(models.Model):
     firstName = models.CharField('Имя', max_length=25)
     secondName = models.CharField('Имя', max_length=25)
     thirdName = models.CharField('Имя', max_length=25)
@@ -22,4 +22,4 @@ class Peaple (models):
         verbose_name_plural = 'Маршруты'
 
     def str(self):
-        return self.title
+        return self.firstName
