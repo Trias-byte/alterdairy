@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'main/main.css' %}">
+    <link rel="stylesheet" href="{% static '{% block pathCss %}{% endblock %}' %}">
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+{% block mainContent %}
 
+{% endblock %}
 </body>
 </html>
