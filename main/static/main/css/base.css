@@ -99,8 +99,6 @@ header{
     border-right: black solid 0.5px;
 }
 .navigation-item:hover{
-    padding-left: 35px;
-    padding-right: 35px;
     border-left: black solid 2px;
     border-right: black solid 2px;
 }
