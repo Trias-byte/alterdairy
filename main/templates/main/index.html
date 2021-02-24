@@ -1,1 +1,7 @@
-{% extend "main/base.html" %}
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Главная страница{% endblock %}
+{% block pathCss %}href="{% static 'main/css/main.css' %}"{% endblock %}
+{% block mainContent %}
+    <h1>Главная страница</h1>
+{% endblock %}
