@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.views.generic import DetailView
+from .models import Peaples
 # Create your views here.
 
 
@@ -9,3 +10,7 @@ def index(request):
 
 def status(request):
     pass
+
+
+def log(request):
+    return render(request, 'main/entered.html')

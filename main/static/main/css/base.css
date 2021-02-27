@@ -30,7 +30,7 @@ html{
 }
 body{
     padding: 0;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
 a{
     color: rgb(253, 167, 109);
@@ -46,24 +46,35 @@ h1{
 }
 
 h2{
-    font-size: 2.5em;
+    font-size: 2.4em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h3{
-    font-size: 2.3em;
+    font-size: 2.2em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h4{
-    font-size: 2.1em;
+    font-size: 2.0em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h5{
-    font-size: 1.9em;
+    font-size: 1.8em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 h6{
-    font-size: 1.7em;
+    font-size: 1.6em;
+    font-family: 'Ubuntu', sans-serif;
 }
+
+p{
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
 header{
     margin: 0;
     display: flex;
@@ -71,10 +82,16 @@ header{
     background-color: #FBC24D;
 
 }
-.logo{
+.logo > a{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+}
+
+.logo > a {
+    font-size: 3em;
+    font-family: Ubuntu;
+    color: inherit;
 }
 
 .logo>span{
@@ -90,6 +107,7 @@ header{
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    background-color: white;
     border-bottom: rgb(236, 236, 236) solid 3px ;
 }
 

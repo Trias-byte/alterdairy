@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}{{ question.title }}{% endblock %}
+{% block pathCss %}href="{% static 'helper/css/detail.css' %}"{% endblock %}
+{% block mainContent %}
+    <div class="main">
+        <div class="grid">
+            <h2> {{ question.title }} </h2>
+            <ul class="flex">
+                <li class="first item"> Предмет  {{ question.subject }}</li>
+                <li class="second item"> Класс {{ question.classes }}</li>
+                <li class="third item"> Кол-во балов {{ question.bals }}</li>
+            </ul>
+        </div>
+        <p class="textquest">{{question.testQuestion}}</p>
+    </div>
+{% endblock %}

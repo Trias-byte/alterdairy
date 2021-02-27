@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+.question{
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(172, 172, 172);
+    margin: 10px ;
+}
+
+.el_in_question{
+    display: flex;
+    align-items: center;
+}
+
+.el_in_question p{
+    font-size: 1.7em;
+    margin: 7px;
+    margin-left: 14px;
+    color:rgb(36, 36, 36);
+    font-family: 'Comfortaa', cursive;
+}
+
+.button{
+    float: right;
+}
+
+.subjects-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around ;
+    flex-wrap: wrap;
+}
+
+.subject-item{
+    padding: 10px;
+}
+.subject-item a{
+    color:rgb(235, 86, 86);
+    font-size: 1.7em;
+}
+.subject{
+    display: block;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 0.7fr 3fr;
+    gap: 20px;
+}

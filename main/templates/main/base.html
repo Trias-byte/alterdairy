@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'main/css/base.css' %}" type="text/css">
-    <link rel="stylesheet" {% block css %}{% endblock %}>
+    <link rel="stylesheet" {% block pathCss %}{% endblock %} type="text/css">
     <script src="https://kit.fontawesome.com/5c41c75e7b.js" crossorigin="anonymous"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -13,11 +13,13 @@
         <div id="content">
             <header>
                 <div class="logo">
-                    <img src="{% static 'main/img/Бобик_без_дневника.svg'%}" alt="Логотип" width="300" height="200">
-                    <span>Бобик</span>
+                    <a  href="{% url 'home' %}">
+                        <img src="{% static 'main/img/Бобик_без_дневника.svg'%}" alt="Логотип" width="300" height="200">
+                        <span>Бобик</span>
+                    </a>
                 </div>
                 <div class="wrap-enter">
-                    <a class="button enter">
+                    <a href="{% url 'enter' %}" class="button enter">
                         Войти</a>
                 </div>
             </header>

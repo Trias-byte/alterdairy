@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Вход{% endblock %}
+{% block pathCss %}href="{% static 'main/css/entered.css' %}"{% endblock %}
+{% block mainContent %}
+    <div class="choise_acc">
+        <div class="choise">
+            <span>Ученик</span>
+            <div class="a_choise">
+                <a href="accounts/login/" class="button">Войти</a>
+            </div>
+        </div>
+        <div class="choise">
+            <span>Учитель</span>
+            <div class="a_choise">
+                <a href="accounts/login/" class="button">Войти</a>
+            </div>
+        </div>
+        <div class="choise">
+            <span>Родитель</span>
+            <div class="a_choise">
+                <a href="accounts/login/" class="button">Войти</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Peaple
+from .models import Peaples
 
 
 class PeapleAdmin(admin.ModelAdmin):
@@ -8,4 +8,4 @@ class PeapleAdmin(admin.ModelAdmin):
     search_fields = ('firstName',)
 
 
-admin.site.register(Peaple, PeapleAdmin)
+admin.site.register(Peaples, PeapleAdmin)

@@ -3,5 +3,53 @@
 {% block title %}Запросы на помощь{% endblock %}
 {% block pathCss %}href="{% static 'helper/css/main.css' %}"{% endblock %}
 {% block mainContent %}
-    <h1>Запросы на помощь</h1>
+    <nav>
+        <ul class="subjects-list">
+            <li class="subject-item">
+                <a href="{% url 'home_helper' %}" class="subject"> <img src=""> Все</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> Математика</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> Русский</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> Биология</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> Химия</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> История</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> Английский</a>
+            </li>
+            <li class="subject-item">
+                <a href="\" class="subject"> <img src=""> Физика</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="grid">
+        <aside>
+            <h3>Самые популярные Вопросы</h3>
+        </aside>
+        <main> 
+            <h2>Запросы на помощь</h2>
+            {% for el in questions_list %}
+                <div class="question">
+                    <h2>{{ el.title }}</h2>
+                    <div class="el_in_question">
+                        <p>Предмет  {{ el.subject }}</p>
+                        <p>Класс  {{ el.classes }}</p>
+                        <p class="balls">Баллы  {{ el.bals }}</p>
+                        <a class="button" href="{% url 'quest-detail' el.id %}">Читать</a>
+                    </div>
+                    
+                </div>
+                
+            {% endfor %}
+        </main>
+    </div>
 {% endblock %}

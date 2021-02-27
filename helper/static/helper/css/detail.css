@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+.main{
+    display: block;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.grid > ul{
+    list-style: none;
+}
+
+.flex{
+    display:flex;
+    justify-content: space-around;
+}
+
+.textquest{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: 'Work Sans', 'sans-serif';
+}
+
+.item{
+    margin: 20px;
+    padding: 20px;
+    font-size: 1.6em;
+}
+
+.first{
+    background-color: rgba(255, 31, 76, 0.623);
+}
+
+.second{
+    background-color: rgba(255, 244, 90, 0.596);
+}
+.third{
+    background-color: rgba(101, 206, 255, 0.623);
+}

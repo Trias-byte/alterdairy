@@ -1,0 +1,40 @@
+
+.content{
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    margin-top: 10vw;
+    flex: 1 0 auto;
+    position: relative;
+}
+h1{
+    text-align: center;
+    position: relative;
+    margin-top: 2vw;
+}
+table{
+    width: 98%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px;
+}
+caption{
+    font-size: 1.8em;
+}
+
+
+tr td:first-child{
+    font-size: 1vw;
+}
+td{
+    padding: 15px;
+    border: 2px solid #FBC24D;
+    text-align: center;
+    width: 2vw;
+}
+th{
+    padding: 20px;
+    width: 2vw;
+    border: 2px solid #FBC24D;
+}
