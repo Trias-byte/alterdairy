@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block head_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'account/css/input.css' %}" type="text/css">
+    <script src="https://kit.fontawesome.com/5c41c75e7b.js" crossorigin="anonymous"></script>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body>
+    <div id="wrapper">
+        <div id="content">
+            <header>
+                <div class="logo">
+                    <a  href="{% url 'home' %}">
+                        <img src="{% static 'main/img/Бобик_без_дневника.svg'%}" alt="Логотип" width="300" height="200">
+                        <span>Бобик</span>
+                    </a>
+                </div>
+            </header>
+            <nav>
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a href="{% url 'home_marks' %}">Отметки</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href=""> <i class="far fa-calendar-alt"></i> События</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href=""> <i class="fas fa-book-open"></i> Уроки</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href=""><i class="fas fa-chart-line"></i> Успеваемость</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="{% url 'home_helper' %}"><i class="far fa-question-circle"></i> Ответы на вопросы</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href=""><i class="fas fa-laptop"></i> ДО</a>
+                    </li>
+                </ul>
+            </nav>
+            {% block body %}
+            {% block content %}
+            {% endblock %}
+            {% endblock %}
+            {% block extra_body %}
+            {% endblock %}
+        </div>
+        <footer>
+            <div id="site_name">
+                <strong>Бобик</strong> - Электронный дневник, в который не страшно заходить
+            </div>
+            <div id="clear">
+            </div>
+            <div id="rights">
+                <a href="">Все права защищены &copy; 2021 год</a>
+            </div>
+            <div id="social">
+                <a href="" title="Группа в ВК"><i class="fab fa-vk"></i></a>
+                <a href="" title="Группа В FaceBook"><i class="fab fa-facebook-f"></i></a>
+                <a href="" title="Telegram канал"><i class="fab fa-telegram"></i></a>
+            </div>
+        </footer>
+    </div>
+  </body>
+</html>

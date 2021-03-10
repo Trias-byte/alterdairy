@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import DetailView
 from .models import RequestsHelps
+from .forms import RequestForm
 
 
 # Create your views here.
@@ -18,4 +19,8 @@ class Detail(DetailView):
 
 
 def add(request):
-    return render(request, 'helper/questions_adder.html')
+    form = RequestForm
+    data = {
+        'form': form
+    }
+    return render(request, 'helper/questions_adder.html', data)

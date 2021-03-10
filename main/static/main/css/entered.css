@@ -29,3 +29,29 @@
     text-align: center;
     margin-top: 10vw;
 }
+
+.status-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:10px;
+}
+
+.first-item{
+    padding:20px;
+}
+
+.second-item{
+    padding:20px;
+}
+
+.form-status{
+    padding:20px;
+}
+
+.form-status > label{
+    font-size: 1.9em;
+}
+
+.form-status > p{
+    font-size: 1.6em;
+}

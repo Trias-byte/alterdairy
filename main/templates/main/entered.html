@@ -3,24 +3,66 @@
 {% block title %}Вход{% endblock %}
 {% block pathCss %}href="{% static 'main/css/entered.css' %}"{% endblock %}
 {% block mainContent %}
-    <div class="choise_acc">
-        <div class="choise">
-            <span>Ученик</span>
-            <div class="a_choise">
-                <a href="accounts/login/" class="button">Войти</a>
+    {% if user.is_authenticated %}
+        <div class="profile">
+            <nav class="profile-nav">
+                <ul>
+                    <li></li>
+                </ul>
+            </nav>
+            <article>
+                <h2 class="status-name">Личные данные</h2>
+                <div class="status-grid">
+                    <div class="first-item">
+                        <div class="form-status">
+                            <label for="name">Имя</label>
+                            <p id="name"></p>
+                        </div>
+                        <div class="form-status">
+                            <label for="lastname">Фамилия</label>
+                            <p id="lastname"></p>
+                        </div>
+                        <div class="form-status">
+                            <label for="classes">Класс</label>
+                            <p id="classes"></p>
+                        </div>
+                        <div class="form-status">
+                            <label for="school">Номер школы</label>
+                            <p id="school"></p>
+                        </div>
+                        <div class="form-status">
+                            <label for="bal">Количество баллов</label>
+                            <p id="bal"></p>
+                        </div>
+                    </div>
+                    <div class="second-item">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </article>
+
+
+        </div>
+    {% else %}
+        <div class="choise_acc">
+            <div class="choise">
+                <span>Ученик</span>
+                <div class="a_choise">
+                    <a href="accounts/login/" class="button">Войти</a>
+                </div>
+            </div>
+            <div class="choise">
+                <span>Учитель</span>
+                <div class="a_choise">
+                    <a href="accounts/login/" class="button">Войти</a>
+                </div>
+            </div>
+            <div class="choise">
+                <span>Родитель</span>
+                <div class="a_choise">
+                    <a href="accounts/login/" class="button">Войти</a>
+                </div>
             </div>
         </div>
-        <div class="choise">
-            <span>Учитель</span>
-            <div class="a_choise">
-                <a href="accounts/login/" class="button">Войти</a>
-            </div>
-        </div>
-        <div class="choise">
-            <span>Родитель</span>
-            <div class="a_choise">
-                <a href="accounts/login/" class="button">Войти</a>
-            </div>
-        </div>
-    </div>
+    {%endif%}
 {% endblock %}

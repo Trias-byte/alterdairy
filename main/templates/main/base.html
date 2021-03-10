@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'main/css/base.css' %}" type="text/css">
@@ -18,10 +18,17 @@
                         <span>Бобик</span>
                     </a>
                 </div>
-                <div class="wrap-enter">
-                    <a href="{% url 'enter' %}" class="button enter">
-                        Войти</a>
-                </div>
+                {% if user.is_authenticated %}
+                    <div class="wrap-enter">
+                        <a href="{% url 'account' %}" class="button enter">
+                            Аккаунт</a>
+                    </div>
+                {% else %}
+                    <div class="wrap-enter">
+                        <a href="{% url 'enter' %}" class="button enter">
+                            Войти</a>
+                    </div>
+                {% endif %}
             </header>
             <nav>
                 <ul class="navigation-list">

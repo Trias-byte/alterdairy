@@ -1,0 +1,37 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load static %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Войти" %}{% endblock %}
+
+
+{% block content %}
+
+<h1>{% trans "Войти" %}</h1>
+
+<p>Пожалуйста, войдите в систему с помощью одной
+из ваших существующих учетных записей.
+ Учетная запись и вход ниже:</p>
+
+
+{% include "socialaccount/snippets/login_extra.html" %}
+
+
+<form class="login" method="POST" action="{% url 'account_login' %}">
+  <fieldset class="fieldset">
+    {% csrf_token %}
+    <div>
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input class="input" type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+    </div>
+    <div>
+      <button class="button " type="submit">{% trans "Войти" %}</button>
+    </div>
+  </fieldset>
+</form>
+
+{% endblock %}

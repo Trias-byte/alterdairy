@@ -3,5 +3,14 @@
 {% block title %}Создание вопроса{% endblock %}
 {% block pathCss %}href="{% static 'helper/css/adder.css' %}"{% endblock %}
 {% block mainContent %}
-    <h1>Создание вопроса</h1>
+<form method="post">
+    <fieldset>
+        {% csrf_token %}
+        <div class="content-adder">
+            {{form.title]}<br>
+            {{form.subject}}<br>
+            {{form.testQuestion}}
+        </div>
+    </fieldset>
+</form>
 {% endblock %}
